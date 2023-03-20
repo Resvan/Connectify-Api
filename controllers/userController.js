@@ -52,6 +52,7 @@ export const login = async (req, res) => {
         delete user.password;
         res.status(200).json({ token, user });
     } catch (err) {
+        console.log(err);
         res.status(500).json({ error: err.message });
     }
 };
@@ -228,6 +229,7 @@ export const googleLogin = async (req, res) => {
             res.status(200).json({ token, user: svedUser })
         }
     } catch (error) {
+        console.log(error);
         res.status(401).json({ success: false, message: "Invalid token" });
     }
 }
