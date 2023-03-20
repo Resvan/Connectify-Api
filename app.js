@@ -18,7 +18,7 @@ const app = express();
 const httpServer = createServer(app);
 const io = new Server(httpServer, {
     cors: {
-        origin: 'https://genuine-manatee-b46a38.netlify.app'
+        origin: 'https://flourishing-beijinho-acd3e4.netlify.app'
     }
 });
 
