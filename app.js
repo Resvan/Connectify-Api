@@ -32,13 +32,7 @@ app.use(cors());
 connectDB();
 
 
-app.use(function (req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range');
-    res.setHeader('Access-Control-Max-Age', '1728000');
-    next();
-});
+
 
 
 app.use('/api', userRoutes);
